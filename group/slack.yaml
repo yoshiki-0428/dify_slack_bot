@@ -1,0 +1,38 @@
+settings:
+  - name: bot_token
+    type: secret-input
+    required: true
+    label:
+      en_US: Bot Token
+      zh_Hans: Bot Token
+      pt_BR: Token do Bot
+      ja_JP: Bot Token
+    placeholder:
+      en_US: Please input your Bot Token
+      zh_Hans: 请输入你的 Bot Token
+      pt_BR: Por favor, insira seu Token do Bot
+      ja_JP: ボットトークンを入力してください
+  - name: allow_retry
+    type: boolean
+    required: false
+    label:
+      en_US: Allow Retry
+      zh_Hans: 允许重试
+      pt_BR: Permitir Retentativas
+      ja_JP: 再試行を許可
+    default: false
+  - name: app
+    type: app-selector
+    required: true
+    label:
+      en_US: App
+      zh_Hans: 应用
+      pt_BR: App
+      ja_JP: アプリ
+    placeholder:
+      en_US: the app you want to use to answer Slack messages
+      zh_Hans: 你想要用来回答 Slack 消息的应用
+      pt_BR: o app que você deseja usar para responder mensagens do Slack
+      ja_JP: あなたが Slack メッセージに回答するために使用するアプリ
+endpoints:
+  - endpoints/slack.yaml

@@ -1,0 +1,49 @@
+version: 0.0.5
+type: plugin
+author: yoshiki-0428
+name: slack-bot
+label:
+  en_US: Slack Bot
+  ja_JP: Slack Bot
+  zh_Hans: Slack Bot
+  pt_BR: Slack Bot
+description:
+  en_US: This Slack Bot supports receiving messages and files from Slack as input to Chatflow/Chatbot/Agent in Dify, and sending messages back to Slack. For file integration, your Dify workflow must include the 'files' input parameter.
+  ja_JP: このSlack Botは、SlackからのメッセージとファイルをDifyのChatflow/Chatbot/Agentへの入力として受け取り、Slackにメッセージを送信することをサポートします。ファイル連携を使用するには、Difyワークフローに'files'入力パラメータが必要です。
+  zh_Hans: 这个Slack Bot支持接收来自Slack的消息和文件作为Dify中Chatflow/Chatbot/Agent的输入，并将消息发送回Slack。对于文件集成，您的Dify工作流必须包含'files'输入参数。
+  pt_BR: Este Slack Bot suporta receber mensagens e arquivos do Slack como entrada para Chatflow/Chatbot/Agent no Dify e enviar mensagens de volta para o Slack. Para integração de arquivos, seu fluxo de trabalho Dify deve incluir o parâmetro de entrada 'files'.
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    model:
+      enabled: true
+      llm: true
+      text_embedding: false
+      rerank: false
+      tts: false
+      speech2text: false
+      moderation: false
+    endpoint:
+      enabled: true
+    app:
+      enabled: true
+    storage:
+      enabled: true
+      size: 1048576
+plugins:
+  endpoints:
+    - group/slack.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2024-12-17T11:05:59.151918+08:00
+verified: false
